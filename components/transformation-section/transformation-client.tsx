@@ -42,17 +42,17 @@ const TransformationSection = () => {
                         top: scanLineY,
                         background: `linear-gradient(90deg, 
               transparent, 
-              hsl(180 80% 50%) 50%, 
+              hsl(270 80% 60%) 50%, 
               transparent
             )`,
-                        boxShadow: '0 0 20px hsl(180 80% 50% / 0.8)'
+                        boxShadow: '0 0 20px hsl(270 80% 60% / 0.8)'
                     }}
                 />
 
                 {/* Section Heading - Always Visible initially */}
                 <div className="absolute top-8 left-0 right-0 z-30 text-center px-4">
-                    <h3 className="text-base md:text-lg font-semibold tracking-widest text-accent  opacity-70">
-                        From Digital Literacy to AI Fluency
+                    <h3 className="text-2xl md:text-5xl font-bold tracking-tight bg-linear-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent pb-2">
+                        Our Next Big Step
                     </h3>
                 </div>
 
@@ -63,8 +63,8 @@ const TransformationSection = () => {
                         style={{ opacity: problemOpacity }}
                         className="absolute max-w-4xl text-center w-full"
                     >
-                        <h2 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 glitch leading-tight" data-text="The Next Great Leap.">
-                            The Next Great Leap.
+                        <h2 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 glitch leading-tight" data-text="The Current Reality.">
+                            The Current Reality.
                         </h2>
                         <div className="space-y-4 md:space-y-6 text-lg md:text-2xl text-muted-foreground px-4">
                             <p className="glitch" data-text="Students graduating with outdated skills.">

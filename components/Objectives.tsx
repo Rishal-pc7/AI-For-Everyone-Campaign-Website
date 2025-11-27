@@ -34,8 +34,8 @@ export default function Objectives({ keralaMapUrl = "/images/kerala-map.png" }: 
 
   return (
     <section className="py-20">
-      <h1 className="text-center text-4xl md:text-6xl lg:text-7xl font-bold mb-4 pb-3 bg-linear-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
-        Our Objectives
+      <h1 className="text-center text-3xl md:text-5xl  font-bold mb-2  bg-linear-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+        Our Mission
       </h1>
       <div className="min-h-screen bg-background flex items-center justify-center p-4 md:p-8">
         <motion.div
