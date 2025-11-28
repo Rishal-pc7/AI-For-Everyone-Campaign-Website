@@ -37,10 +37,10 @@ export default function CollaborationModesClient() {
             <div className="w-full max-w-[1600px] mx-auto">
                 <AnimatedItem className="text-center mb-16">
                     <h2 className="text-5xl font-bold mb-4 pb-2 bg-linear-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
-                        Choose Your Impact
+                        The Collaboration Engine
                     </h2>
                     <p className="text-muted-foreground text-lg">
-                        Five powerful ways to make a difference
+                        This initiative runs on distributed power. We invite organizations to integrate their resources into our open framework.
                     </p>
                 </AnimatedItem>
 
