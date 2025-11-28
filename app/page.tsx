@@ -2,11 +2,10 @@ import Navbar from "@/components/navbar"
 import HeroSection from "@/components/hero-section"
 import WhyNowScroll from "@/components/why-now-scroll"
 import ChooseJourney from "@/components/choose-journey"
-import PhilosophySection from "@/components/philosophy-section"
+import PhilosophyTriangle from "@/components/philosophy-triangle"
 import PartnerEcosystem from "@/components/partner-ecosystem"
 import CollaborationModes from "@/components/collaboration-modes"
 import Footer from "@/components/footer"
-import Objectives from "@/components/Objectives"
 
 export default function Home() {
   return (
@@ -15,9 +14,8 @@ export default function Home() {
         <Navbar />
         <HeroSection />
         <WhyNowScroll />
-        <Objectives />
+        <PhilosophyTriangle />
         <ChooseJourney />
-        <PhilosophySection />
         <PartnerEcosystem />
         <CollaborationModes />
         <Footer />

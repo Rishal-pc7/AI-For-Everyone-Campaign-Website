@@ -136,6 +136,8 @@
   --color-neon-teal: var(--neon-teal);
   --color-glass-bg: var(--glass-bg);
   --color-deep-purple: var(--deep-purple);
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-spin-slow-reverse: spin 25s linear infinite reverse;
 }
 
 @layer base {

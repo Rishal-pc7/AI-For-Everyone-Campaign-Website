@@ -75,7 +75,7 @@ export const WhyNowScrollClient = () => {
                         {/* Base text */}
                         <h1 className="text-4xl md:text-8xl font-black font-heading text-destructive text-center leading-tight select-none">
                             BUT THE WORLD SHIFTED.<br />
-                            AUTOMATION. DEEPFAKES.<br />
+                            AUTOMATION, DEEPFAKES,<br />
                             OBSOLESCENCE.
                         </h1>
 
@@ -88,7 +88,7 @@ export const WhyNowScrollClient = () => {
                             className="absolute inset-0 text-4xl md:text-8xl font-black font-heading text-destructive mix-blend-exclusion text-center leading-tight select-none pointer-events-none"
                         >
                             BUT THE WORLD SHIFTED.<br />
-                            AUTOMATION. DEEPFAKES.<br />
+                            AUTOMATION, DEEPFAKES,<br />
                             OBSOLESCENCE.
                         </motion.div>
 
@@ -101,7 +101,7 @@ export const WhyNowScrollClient = () => {
                             className="absolute inset-0 text-4xl md:text-8xl font-black font-heading text-accent mix-blend-exclusion text-center leading-tight select-none pointer-events-none"
                         >
                             BUT THE WORLD SHIFTED.<br />
-                            AUTOMATION. DEEPFAKES.<br />
+                            AUTOMATION, DEEPFAKES,<br />
                             OBSOLESCENCE.
                         </motion.div>
                     </div>

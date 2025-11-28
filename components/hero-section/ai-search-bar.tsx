@@ -110,12 +110,12 @@ const AiSearchBar = () => {
     }, [scenarioIndex]);
 
     return (
-        <div className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center min-h-[400px]">
+        <div className="w-full max-w-2xl mx-auto flex flex-col items-center justify-end md:justify-center min-h-[500px] md:min-h-[400px]">
 
             {/* Conversation Area */}
             <div
                 ref={scrollRef}
-                className="w-full h-80 overflow-y-auto mb-6 space-y-6 px-4 no-scrollbar mask-image-fade-top"
+                className="w-full h-92 md:h-80 overflow-y-auto mb-6 space-y-6 px-4 no-scrollbar mask-image-fade-top"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
                 <style jsx>{`
