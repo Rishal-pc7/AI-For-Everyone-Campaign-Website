@@ -1,9 +1,10 @@
 import Navbar from "@/components/navbar"
 import HeroSection from "@/components/hero-section"
 import TransformationSection from "@/components/transformation-section"
-import SmartSelector from "@/components/smart-selector"
+import ChooseJourney from "@/components/choose-journey"
 import PhilosophySection from "@/components/philosophy-section"
-import PartnerSection from "@/components/partner-section"
+import PartnerEcosystem from "@/components/partner-ecosystem"
+import CollaborationModes from "@/components/collaboration-modes"
 import Footer from "@/components/footer"
 import Objectives from "@/components/Objectives"
 
@@ -15,9 +16,10 @@ export default function Home() {
         <HeroSection />
         <TransformationSection />
         <Objectives />
-        <SmartSelector />
+        <ChooseJourney />
         <PhilosophySection />
-        <PartnerSection />
+        <PartnerEcosystem />
+        <CollaborationModes />
         <Footer />
       </div>
     </main>
