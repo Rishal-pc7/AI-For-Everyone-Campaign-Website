@@ -3,7 +3,7 @@ import KeralaParticleMap from "./kerala-particle-map"
 export default function HeroBackground() {
     return (
 
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900 via-[#0a0a0a] to-black">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-gray-900 via-[#0a0a0a] to-black">
             {/* Animated gradient orbs */}
             <div className="absolute top-1/4 right-1/3 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse-glow animation-delay-1000" />
 
