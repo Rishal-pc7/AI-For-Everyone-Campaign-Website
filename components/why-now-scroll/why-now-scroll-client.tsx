@@ -13,7 +13,7 @@ export const WhyNowScrollClient = () => {
 
     // Track scroll velocity for reactive glitch
     const scrollVelocity = useVelocity(scrollYProgress);
-    const glitchIntensity = useTransform(scrollVelocity, [-1, 0, 1], [15, 0, 15]);
+    const glitchIntensity = useTransform(scrollVelocity, [-1.5, 0, 1.5], [6, 0, 6]); // Reduced intensity for better readability
 
     // Check for reduced motion preference (this should ideally be a hook or context, but inline for now is fine)
     // We'll assume standard behavior for now to keep it simple, or use a safe default if window is undefined (SSR)
@@ -22,16 +22,16 @@ export const WhyNowScrollClient = () => {
     // Stage 1: The Legacy (0.0 - 0.3)
     const legacyOpacity = useTransform(scrollYProgress, [0, 0.15, 0.3, 0.35], [1, 1, 1, 0]);
 
-    // Stage 2: The Disruption (0.3 - 0.7)
-    const disruptionOpacity = useTransform(scrollYProgress, [0.25, 0.35, 0.65, 0.75], [0, 1, 1, 0]);
+    // Stage 2: The Disruption (0.3 - 0.75) - Extended duration
+    const disruptionOpacity = useTransform(scrollYProgress, [0.3, 0.4, 0.7, 0.8], [0, 1, 1, 0]);
     const glitchOffsetX = useTransform(glitchIntensity, (v) => Math.abs(v));
 
-    // Stage 3: The Clarity (0.7 - 1.0)
-    const clarityOpacity = useTransform(scrollYProgress, [0.65, 0.75, 1], [0, 1, 1]);
-    const glowIntensity = useTransform(scrollYProgress, [0.7, 0.85, 1], [0, 1, 0.8]);
+    // Stage 3: The Clarity (0.75 - 1.0) - Pushed back slightly
+    const clarityOpacity = useTransform(scrollYProgress, [0.75, 0.85, 1], [0, 1, 1]);
+    const glowIntensity = useTransform(scrollYProgress, [0.8, 0.9, 1], [0, 1, 0.8]);
 
     return (
-        <div ref={containerRef} className="h-[150vh] md:h-[300vh] relative bg-background">
+        <div ref={containerRef} className="h-[300vh] relative bg-background">
             <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
                 {/* Fixed Heading */}
                 <motion.div

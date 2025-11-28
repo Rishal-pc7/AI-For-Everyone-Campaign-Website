@@ -5,7 +5,7 @@ import AiSearchBar from "./ai-search-bar"
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center px-4 py-10 md:py-20 overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center px-4 py-5 md:py-20 overflow-hidden">
             <HeroBackground />
 
             <AnimationWrapper className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
