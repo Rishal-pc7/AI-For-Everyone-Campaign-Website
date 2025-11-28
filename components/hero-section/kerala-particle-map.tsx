@@ -14,64 +14,52 @@ export default function KeralaParticleMap() {
     }, []);
 
     return (
-        <div className="relative w-full  h-[500px] md:h-[600px] flex items-center justify-center -rotate-15">
-
-            {/* Optional: Add a glowing outline behind it so the shape is visible even if particles move away */}
-            <img
-                src="/images/kerala-mask.png"
-                alt="Kerala Map Outline"
-                className="absolute w-auto h-full opacity-60 pointer-events-none drop-shadow-[0_0_20px_rgba(45,212,191,0.6)] translate-x-0   lg:-translate-x-16 transition-transform duration-500"
-            />
+        <div className="relative w-full h-[500px] -rotate-15 md:h-[700px] flex items-center justify-center">
 
             {/* 1. The Particle Container */}
             {init && (
                 <div
-                    className="w-full h-full [mask-center] lg:[mask-[calc(50%-4rem)_center]] [-webkit-mask-position:center] lg:[-webkit-mask-position:calc(50%-4rem)_center]"
+                    className="w-full h-full mask-center mask-size-contain transition-transform duration-500 md:-translate-x-26"
                     style={{
                         maskImage: "url('/images/kerala-mask.png')",
                         WebkitMaskImage: "url('/images/kerala-mask.png')",
                         maskSize: "contain",
                         WebkitMaskSize: "contain",
                         maskRepeat: "no-repeat",
-                        WebkitMaskRepeat: "no-repeat",
+                        maskPosition: "center"
                     }}
                 >
                     <Particles
                         id="kerala-particles"
                         options={{
-                            fullScreen: { enable: false },
-                            background: { color: "transparent" }, // Void background
+                            background: { color: "transparent" },
+                            detectRetina: true,
                             particles: {
-                                color: { value: "#2dd4bf" }, // Teal dots
+                                color: { value: "#2dd4bf" },
                                 links: {
-                                    color: "#2dd4bf", // Teal lines
+                                    color: "#2dd4bf",
                                     distance: 150,
                                     enable: true,
                                     opacity: 0.5,
                                     width: 1,
                                 },
-                                move: { enable: true, speed: 1 }, // Slow float
-                                number: { value: 150 }, // Density
+                                move: { enable: true, speed: 1 },
+                                number: { value: 150 },
                                 opacity: { value: 0.7 },
                                 size: { value: { min: 1, max: 3 } },
                             },
                             interactivity: {
                                 events: {
-                                    onHover: { enable: true, mode: "grab" }, // Connect to mouse
+                                    onHover: { enable: true, mode: "grab" },
                                 },
                             },
-                            detectRetina: true,
                             responsive: [
                                 {
                                     maxWidth: 768,
                                     options: {
                                         particles: {
-                                            number: {
-                                                value: 100, // Reduced density for mobile
-                                            },
-                                            links: {
-                                                distance: 50, // Shorter links for mobile
-                                            }
+                                            number: { value: 40 }, // Lower count for mobile
+                                            links: { distance: 100 } // Shorter links for mobile
                                         },
                                     },
                                 },
@@ -81,6 +69,12 @@ export default function KeralaParticleMap() {
                     />
                 </div>
             )}
+
+            {/* Static Kerala Map Image */}
+            <img
+                src="/images/kerala-mask.png"
+                className="absolute w-auto h-full opacity-70 pointer-events-none drop-shadow-[0_0_15px_rgba(45,212,191,0.5)] transition-transform duration-500 md:-translate-x-26"
+            />
         </div>
     );
 }

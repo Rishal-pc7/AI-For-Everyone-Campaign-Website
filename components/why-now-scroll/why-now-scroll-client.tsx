@@ -31,14 +31,19 @@ export const WhyNowScrollClient = () => {
     const glowIntensity = useTransform(scrollYProgress, [0.7, 0.85, 1], [0, 1, 0.8]);
 
     return (
-        <div ref={containerRef} className="h-[300vh] relative bg-background">
+        <div ref={containerRef} className="h-[150vh] md:h-[300vh] relative bg-background">
             <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
                 {/* Fixed Heading */}
-                <div className="absolute top-20 left-0 right-0 z-30 text-center px-4">
-                    <h3 className="text-2xl md:text-4xl font-bold bg-linear-to-r from-accent via-primary to-accent bg-clip-text text-transparent pb-2">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="absolute top-20 left-0 right-0 z-30 text-center px-4"
+                >
+                    <h3 className="text-2xl md:text-4xl font-bold font-heading bg-linear-to-r from-accent via-primary to-accent bg-clip-text text-transparent pb-2">
                         Why Now?
                     </h3>
-                </div>
+                </motion.div>
 
                 {/* Stage 1: The Legacy - Retro Terminal */}
                 <motion.div
@@ -48,9 +53,14 @@ export const WhyNowScrollClient = () => {
                     }}
                     className="absolute inset-0 flex items-center justify-center px-6 md:px-8"
                 >
-                    <h1 className="text-4xl md:text-8xl font-black font-mono text-muted-foreground text-center leading-tight">
+                    <motion.h1
+                        initial={{ scale: 0.9, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-4xl md:text-8xl font-black font-heading text-muted-foreground text-center leading-tight"
+                    >
                         1990: WE CHAMPIONED<br />DIGITAL LITERACY.
-                    </h1>
+                    </motion.h1>
                 </motion.div>
 
                 {/* Stage 2: The Disruption - Heavy Glitch */}
@@ -63,7 +73,7 @@ export const WhyNowScrollClient = () => {
                 >
                     <div className="relative">
                         {/* Base text */}
-                        <h1 className="text-4xl md:text-8xl font-black font-mono text-destructive text-center leading-tight select-none">
+                        <h1 className="text-4xl md:text-8xl font-black font-heading text-destructive text-center leading-tight select-none">
                             BUT THE WORLD SHIFTED.<br />
                             AUTOMATION. DEEPFAKES.<br />
                             OBSOLESCENCE.
@@ -75,7 +85,7 @@ export const WhyNowScrollClient = () => {
                                 x: glitchOffsetX,
                                 filter: useTransform(glitchIntensity, (v) => `blur(${Math.abs(v) * 0.2}px)`),
                             }}
-                            className="absolute inset-0 text-4xl md:text-8xl font-black font-mono text-destructive mix-blend-exclusion text-center leading-tight select-none pointer-events-none"
+                            className="absolute inset-0 text-4xl md:text-8xl font-black font-heading text-destructive mix-blend-exclusion text-center leading-tight select-none pointer-events-none"
                         >
                             BUT THE WORLD SHIFTED.<br />
                             AUTOMATION. DEEPFAKES.<br />
@@ -88,7 +98,7 @@ export const WhyNowScrollClient = () => {
                                 x: useTransform(glitchOffsetX, (v) => -v),
                                 filter: useTransform(glitchIntensity, (v) => `blur(${Math.abs(v) * 0.2}px)`),
                             }}
-                            className="absolute inset-0 text-4xl md:text-8xl font-black font-mono text-accent mix-blend-exclusion text-center leading-tight select-none pointer-events-none"
+                            className="absolute inset-0 text-4xl md:text-8xl font-black font-heading text-accent mix-blend-exclusion text-center leading-tight select-none pointer-events-none"
                         >
                             BUT THE WORLD SHIFTED.<br />
                             AUTOMATION. DEEPFAKES.<br />
@@ -112,10 +122,19 @@ export const WhyNowScrollClient = () => {
                                 opacity: glowIntensity,
                                 scale: useTransform(glowIntensity, [0, 1], [0.8, 1.2]),
                             }}
+                            animate={{
+                                scale: [1, 1.1, 1],
+                                opacity: [0.5, 0.8, 0.5]
+                            }}
+                            transition={{
+                                duration: 4,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }}
                             className="absolute inset-0 blur-3xl bg-primary/30 -z-10"
                         />
 
-                        <h1 className="text-4xl md:text-8xl font-black font-sans text-primary text-center leading-tight relative z-10">
+                        <h1 className="text-4xl md:text-8xl font-black font-heading text-primary text-center leading-tight relative z-10">
                             NOW: WE DEFINE<br />
                             RESPONSIBLE AI.
                         </h1>

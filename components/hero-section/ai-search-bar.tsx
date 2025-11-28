@@ -54,7 +54,7 @@ const AiSearchBar = () => {
             const currentScenario = SCENARIOS[scenarioIndex];
 
             // 1. Wait before starting new scenario
-            await new Promise(r => setTimeout(r, 500));
+            await new Promise(r => setTimeout(r, 100)); // Reduced from 500ms
             if (!isMounted) return;
 
             // 2. Simulate User Typing
@@ -64,7 +64,7 @@ const AiSearchBar = () => {
                 await new Promise(r => setTimeout(r, 20)); // Typing speed
             }
 
-            await new Promise(r => setTimeout(r, 150)); // Pause before sending
+            await new Promise(r => setTimeout(r, 50)); // Reduced from 150ms
             if (!isMounted) return;
 
             // 3. Send User Message
@@ -74,7 +74,7 @@ const AiSearchBar = () => {
 
             // 4. AI Thinking
             setIsAiThinking(true);
-            await new Promise(r => setTimeout(r, 500)); // Thinking time
+            await new Promise(r => setTimeout(r, 200)); // Reduced from 500ms
             if (!isMounted) return;
             setIsAiThinking(false);
 
@@ -93,10 +93,10 @@ const AiSearchBar = () => {
             // 6. Wait before next scenario
             await new Promise(r => setTimeout(r, 500)); // Read time
             if (!isMounted) return;
-    
+
             // 7. Prepare next loop
             if (scenarioIndex === SCENARIOS.length - 1) {
-                await new Promise(r => setTimeout(r, 2000)); // Read time
+                await new Promise(r => setTimeout(r, 1200)); // Reduced from 2000ms
                 setMessages([]); // Reset chat after last scenario
                 setScenarioIndex(0);
             } else {

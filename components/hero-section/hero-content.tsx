@@ -10,7 +10,7 @@ export default function HeroContent() {
     return (
         <AnimatedItem className="space-y-3 order-2 lg:order-1">
             <motion.h1
-                className="text-4xl md:text-6xl  font-bold leading-tight"
+                className="text-4xl md:text-6xl font-bold font-heading leading-tight"
                 variants={{
                     hidden: { opacity: 0, y: 30 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.1 } },
