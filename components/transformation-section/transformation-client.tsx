@@ -52,7 +52,7 @@ const TransformationSection = () => {
                 {/* Section Heading - Always Visible initially */}
                 <div className="absolute top-8 left-0 right-0 z-30 text-center px-4">
                     <h3 className="text-2xl md:text-5xl font-bold  bg-linear-to-r from-accent via-primary to-accent bg-clip-text text-transparent pb-2">
-                        Our Next Big Step
+                        Why Now?
                     </h3>
                 </div>
 

@@ -54,17 +54,17 @@ const AiSearchBar = () => {
             const currentScenario = SCENARIOS[scenarioIndex];
 
             // 1. Wait before starting new scenario
-            await new Promise(r => setTimeout(r, 1500));
+            await new Promise(r => setTimeout(r, 500));
             if (!isMounted) return;
 
             // 2. Simulate User Typing
             for (let i = 0; i <= currentScenario.question.length; i++) {
                 if (!isMounted) return;
                 setInputValue(currentScenario.question.substring(0, i));
-                await new Promise(r => setTimeout(r, 50)); // Typing speed
+                await new Promise(r => setTimeout(r, 20)); // Typing speed
             }
 
-            await new Promise(r => setTimeout(r, 500)); // Pause before sending
+            await new Promise(r => setTimeout(r, 150)); // Pause before sending
             if (!isMounted) return;
 
             // 3. Send User Message
@@ -74,7 +74,7 @@ const AiSearchBar = () => {
 
             // 4. AI Thinking
             setIsAiThinking(true);
-            await new Promise(r => setTimeout(r, 1500)); // Thinking time
+            await new Promise(r => setTimeout(r, 500)); // Thinking time
             if (!isMounted) return;
             setIsAiThinking(false);
 
@@ -87,15 +87,16 @@ const AiSearchBar = () => {
                 if (!isMounted) return;
                 currentAnswer = currentScenario.answer.substring(0, i);
                 setMessages(prev => prev.map(m => m.id === aiMsgId ? { ...m, content: currentAnswer } : m));
-                await new Promise(r => setTimeout(r, 20)); // AI typing speed
+                await new Promise(r => setTimeout(r, 15)); // AI typing speed
             }
 
             // 6. Wait before next scenario
-            await new Promise(r => setTimeout(r, 1000)); // Read time
+            await new Promise(r => setTimeout(r, 500)); // Read time
             if (!isMounted) return;
-
+    
             // 7. Prepare next loop
             if (scenarioIndex === SCENARIOS.length - 1) {
+                await new Promise(r => setTimeout(r, 2000)); // Read time
                 setMessages([]); // Reset chat after last scenario
                 setScenarioIndex(0);
             } else {

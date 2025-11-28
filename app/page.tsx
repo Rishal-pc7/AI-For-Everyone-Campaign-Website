@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar"
 import HeroSection from "@/components/hero-section"
-import TransformationSection from "@/components/transformation-section"
+import WhyNowScroll from "@/components/why-now-scroll"
 import ChooseJourney from "@/components/choose-journey"
 import PhilosophySection from "@/components/philosophy-section"
 import PartnerEcosystem from "@/components/partner-ecosystem"
@@ -14,7 +14,7 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
         <HeroSection />
-        <TransformationSection />
+        <WhyNowScroll />
         <Objectives />
         <ChooseJourney />
         <PhilosophySection />
