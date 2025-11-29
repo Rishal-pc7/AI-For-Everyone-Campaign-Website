@@ -2,7 +2,7 @@
 
 > **A futuristic, narrative-driven campaign portal for the 'AI for Everyone' initiative, built using an AI-native development stack.**
 
-**[🔴 Live Demo](https://ai-for-everyone-campaign-website.vercel.app/)** | **[📄 Project Repository](https://github.com/Rishal-pc7/AI-For-Everyonr-Campaign-Website)**
+**[🔴 Live Demo](https://ai-for-everyone-campaign-website.vercel.app/)** | **[📄 Project Repository](https://github.com/Rishal-pc7/AI-For-Everyone-Campaign-Website)**
 
 ---
 
