@@ -1,5 +1,4 @@
 import KeralaParticleMap from "./kerala-particle-map"
-
 export default function HeroBackground() {
     return (
 

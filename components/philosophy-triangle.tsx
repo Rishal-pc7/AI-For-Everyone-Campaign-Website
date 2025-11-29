@@ -61,7 +61,7 @@ export default function HeadHandHeart() {
     const CurrentIcon = activeItem.icon;
 
     return (
-        <section className="relative w-full py-24 overflow-hidden flex flex-col items-center justify-center">
+        <section id="philosophy" className="relative w-full py-24 overflow-hidden flex flex-col items-center justify-center">
 
             {/* Section Header */}
             <div className="text-center md:mb-44 relative z-10 px-4">

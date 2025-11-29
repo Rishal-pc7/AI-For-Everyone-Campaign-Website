@@ -5,9 +5,9 @@ import { FeatureCard } from "./FeatureCard";
 
 export const EmpoweringSection = () => {
   return (
-    <section className="relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
+    <section id="about" className="relative pt-24 md:py-20 py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
       {/* Gradient background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+      <div className="absolute inset-0 bg-linear-to-b from-background via-background/95 to-background" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
@@ -18,7 +18,7 @@ export const EmpoweringSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-glow-teal bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-primary via-accent to-glow-teal bg-clip-text text-transparent">
             How AI Empowers Everyday Lives
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
