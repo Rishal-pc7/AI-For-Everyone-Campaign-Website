@@ -13,7 +13,7 @@ This project was not just "coded"; it was engineered using a **Multi-Agent AI Wo
 
 | Stage | AI Agent / Tool | Role in Workflow |
 | :--- | :--- | :--- |
-| **1. Strategy** | **Google Gemini** | **Product Manager (PM)**<br>Analyzed the 10-page campaign PDF, generated the PRD, defined user personas (KuttyMakers vs. Young Makers), and wrote all narrative copy. |
+| **1. Strategy** | **Google Gemini** | **Product Manager (PM)**<br>Analyzed the 10-page campaign PDF, generated the PRD, generated prompts for MVP Generation from the PRD and UI Enhancements, and wrote all narrative copy. |
 | **2. Design** | **v0.dev** | **UI Architect**<br>Drafted the initial Project Layout of all sections structure based on text prompts. |
 | **3. Polish** | **Lovable** | **Frontend Designer**<br>Refined all the sections animation and the "Resource Matcher" logic gate for mobile responsiveness. |
 | **4. Assembly** | **Antigravity IDE** | **Full-Stack Engineer**<br>Used for final code assembly, routing, Next.js optimization, and blending the generated components into a cohesive app. |
