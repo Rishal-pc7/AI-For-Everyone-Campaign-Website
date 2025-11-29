@@ -63,6 +63,7 @@ export function AiTerminalInput({ inputValue }: { inputValue: string }) {
                     type="text"
                     value={inputValue}
                     readOnly
+                    suppressHydrationWarning
                     placeholder="About our AI mission..."
                     className="flex-1 bg-transparent border-none focus:ring-0 text-white placeholder-gray-500 h-full text-sm cursor-not-allowed"
                     disabled

@@ -69,6 +69,7 @@ export default function ChooseJourneyClient() {
 
                         return (
                             <button
+                                suppressHydrationWarning
                                 key={journey.id}
                                 onClick={() => setActiveTab(journey.id)}
                                 className={`
@@ -157,15 +158,18 @@ export default function ChooseJourneyClient() {
                     return (
                         <AnimatedItem
                             key={journey.id}
+                            layout
                             className={`
-                  rounded-3xl border transition-all duration-300
+                  rounded-3xl border transition-colors duration-300
                   ${isActive
                                     ? "bg-glass-bg/10 backdrop-blur-xl border-neon-purple shadow-[0_0_30px_rgba(168,85,247,0.4)]"
                                     : "bg-glass-bg/5 backdrop-blur-sm border-border/20"
                                 }
                 `}
                         >
-                            <button
+                            <motion.button
+                                suppressHydrationWarning
+                                layout="position"
                                 onClick={() => setActiveTab(isActive ? "" : journey.id)}
                                 className="w-full p-6 flex items-center gap-4 text-left"
                             >
@@ -179,16 +183,16 @@ export default function ChooseJourneyClient() {
                                 >
                                     {journey.label}
                                 </span>
-                            </button>
+                            </motion.button>
 
-                            <AnimatePresence>
+                            <AnimatePresence mode="sync">
                                 {isActive && (
                                     <motion.div
                                         key="content"
                                         initial={{ height: 0, opacity: 0 }}
                                         animate={{ height: "auto", opacity: 1 }}
                                         exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.3 }}
+                                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                         className="overflow-hidden"
                                     >
                                         <div className="px-6 pb-6 pt-2 space-y-4">
