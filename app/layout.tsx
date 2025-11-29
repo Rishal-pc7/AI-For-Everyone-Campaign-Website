@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 }
 
 import { Providers } from "@/components/providers"
+import AITransparency from "@/components/ai-transparency"
 
 export default function RootLayout({
   children,
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${spaceMono.variable} font-sans antialiased`}>
         <Providers>
           {children}
+          <AITransparency />
         </Providers>
         <Analytics />
       </body>

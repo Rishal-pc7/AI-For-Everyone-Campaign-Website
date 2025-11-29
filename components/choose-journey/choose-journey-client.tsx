@@ -1,8 +1,8 @@
 "use client"
 
-import { useState, type ComponentType } from "react"
+import { useState, useId, type ComponentType } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Gamepad2, Code2, ShieldCheck, ArrowRight } from "lucide-react"
+import { Gamepad2, Code2, ShieldCheck } from "lucide-react"
 import { AnimationWrapper, AnimatedItem } from "@/components/shared/animation-wrapper"
 
 interface Journey {
@@ -43,6 +43,7 @@ const journeys: Journey[] = [
 
 export default function ChooseJourneyClient() {
     const [activeTab, setActiveTab] = useState(journeys[0].id)
+    const uniqueId = useId()
     const activeJourney = journeys.find((j) => j.id === activeTab) || journeys[0]
     const Icon = activeJourney.icon
 
@@ -95,7 +96,7 @@ export default function ChooseJourneyClient() {
                                 {/* Glow effect on active tab */}
                                 {isActive && (
                                     <motion.div
-                                        layoutId="activeTabGlow"
+                                        layoutId={`${uniqueId}-activeTabGlow`}
                                         className="absolute inset-0 rounded-2xl bg-linear-to-r from-neon-purple/20 to-neon-teal/20 -z-10"
                                         transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                     />
@@ -179,6 +180,7 @@ export default function ChooseJourneyClient() {
                             <AnimatePresence>
                                 {isActive && (
                                     <motion.div
+                                        key="content"
                                         initial={{ height: 0, opacity: 0 }}
                                         animate={{ height: "auto", opacity: 1 }}
                                         exit={{ height: 0, opacity: 0 }}
