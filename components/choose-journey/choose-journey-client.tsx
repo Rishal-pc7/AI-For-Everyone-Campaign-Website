@@ -51,7 +51,7 @@ export default function ChooseJourneyClient() {
         <AnimationWrapper className="relative max-w-6xl mx-auto">
             {/* Header */}
             <AnimatedItem className="text-center mb-16">
-                <h2 className="text-2xl md:text-5xl font-bold tracking-tight bg-linear-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent pb-2">
+                <h2 className="text-2xl md:text-5xl font-bold tracking-tight bg-linear-to-r from-accent via-primary to-accent bg-clip-text text-transparent pb-2">
                     Find Your Place in the Movement.
                 </h2>
                 <p className="text-xl text-muted-foreground">
@@ -129,8 +129,8 @@ export default function ChooseJourneyClient() {
                                     </h3>
                                     {
                                         activeJourney.badge.map((badge) => (
-                                            <div key={badge} className="inline-block px-3 mr-3 mb-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-medium text-neon-purple">
-                                                {badge}
+                                            <div key={badge} className="inline-block px-3 mr-3 mb-3 py-1 rounded-full bg-transparent backdrop-blur-md border border-white/20 ">
+                                                <span className="text-base font-semibold  text-purple-400">{badge}</span>
                                             </div>
                                         ))
                                     }
@@ -201,8 +201,8 @@ export default function ChooseJourneyClient() {
                                             </h3>
                                             {
                                                 journey.badge.map((badge) => (
-                                                    <div key={badge} className="inline-block px-3 mr-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-medium text-neon-purple">
-                                                        {badge}
+                                                    <div key={badge} className="inline-block px-3 mr-3 py-1 rounded-full  bg-transparent backdrop-blur-xs border border-white/20">
+                                                        <span className="text-purple-400 font-semibold text-base">{badge}</span>
                                                     </div>
                                                 ))
                                             }

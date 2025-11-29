@@ -26,7 +26,7 @@ export const FeatureCard = ({
   const Icon= icon=="ShieldCheck"? ShieldCheck:icon=="Briefcase"? Briefcase: Globe
   return (
     <AnimatedDiv
-      key={key}
+      
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

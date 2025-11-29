@@ -40,7 +40,7 @@ export const EmpoweringSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-primary via-accent to-glow-teal bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
             How AI Empowers Everyday Lives
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
