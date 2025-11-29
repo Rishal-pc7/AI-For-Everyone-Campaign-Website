@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, TargetAndTransition, Transition, VariantLabels, Variants, ViewportOptions } from "framer-motion"
+import { motion, MotionStyle, TargetAndTransition, Transition, VariantLabels, Variants, ViewportOptions } from "framer-motion"
 import React from "react"
 
 const containerVariants: Variants = {
@@ -44,7 +44,7 @@ export function AnimatedItem({ children, className, variants }: { children: Reac
     )
 }
 
-export function AnimatedDiv({ children, className, initial, animate,whileInView,viewport,transition,whileHover }: { children: React.ReactNode, className?: string, initial: TargetAndTransition | boolean | VariantLabels, animate?: TargetAndTransition | boolean | VariantLabels,whileInView?: TargetAndTransition | undefined | VariantLabels,viewport?: ViewportOptions | undefined,transition?: Transition<any>|undefined,whileHover?: TargetAndTransition |  VariantLabels|undefined  }) {
+export function AnimatedDiv({ children, className, initial, animate,whileInView,viewport,transition,whileHover,style }: { children: React.ReactNode, className?: string, initial?: TargetAndTransition | boolean | VariantLabels, animate?: TargetAndTransition | boolean | VariantLabels,whileInView?: TargetAndTransition | undefined | VariantLabels,viewport?: ViewportOptions | undefined,transition?: Transition<any>|undefined,whileHover?: TargetAndTransition |  VariantLabels|undefined  ,style?: MotionStyle|undefined}) {
     return (
         <motion.div
             className={className}
@@ -54,6 +54,7 @@ export function AnimatedDiv({ children, className, initial, animate,whileInView,
             viewport={viewport}
             transition={transition}
             whileHover={whileHover}
+            style={style}
         >
             {children}
         </motion.div>
@@ -61,9 +62,9 @@ export function AnimatedDiv({ children, className, initial, animate,whileInView,
 }
 
 
-export function AnimatedHeading({ children, className, variants }: { children: React.ReactNode, className?: string, variants?: Variants }) {
+export function AnimatedHeading({ children, className, variants,initial,animate,whileInView,transition }: { children: React.ReactNode, className?: string, variants?: Variants,initial?: TargetAndTransition | boolean | VariantLabels,animate?: TargetAndTransition | boolean | VariantLabels,whileInView?: TargetAndTransition | undefined | VariantLabels,transition?: Transition<any>|undefined }) {
     return (
-        <motion.h1 className={className} variants={variants || itemVariants}>
+        <motion.h1 className={className} variants={variants || itemVariants} initial={initial} animate={animate} whileInView={whileInView} transition={transition}>
             {children}
         </motion.h1>
     )

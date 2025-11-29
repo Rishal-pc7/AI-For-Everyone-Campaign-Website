@@ -26,6 +26,7 @@ export const EmpoweringSection = () => {
 
   ]
   return (
+    
     <section id="about" className="relative pt-24 md:py-20 py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
       {/* Gradient background overlay */}
       <div className="absolute inset-0 bg-linear-to-b from-background via-background/95 to-background" />

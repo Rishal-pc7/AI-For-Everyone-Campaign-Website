@@ -23,12 +23,9 @@ const Footer = () => {
 
           {/* Column 2: The Narrative */}
           <div className="space-y-4">
-            <div className="font-mono-label text-xs text-console-gray opacity-60 mb-3">
-              
-            </div>
             <nav className="space-y-2">
               <Link
-                href="#Home"
+                href="#home"
                 className="block text-sm text-muted-foreground hover:text-foreground transition-console"
               >
                 Home
