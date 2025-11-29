@@ -24,7 +24,7 @@ This project was not just "coded"; it was engineered using a **Multi-Agent AI Wo
 
 ### 1. The "Mission Control" Hero
 * **Concept:** A blend of Kerala's heritage and AI future.
-* **AI Contribution:** **v0** generated the "Gemini Terminal" code. I manually coded the blending logic to layer the map, terminal, and silhouette.
+* **AI Contribution:** **Lovable** generated the "Gemini Terminal" code. I manually coded the blending logic to layer the map, terminal, and silhouette.
 
 ### 2. The "Consumer vs. Creator" Narrative Scroll
 * **Concept:** A scroll-triggered transformation from "Glitchy Chaos" (Problems) to "Clean Future" (Solutions).
