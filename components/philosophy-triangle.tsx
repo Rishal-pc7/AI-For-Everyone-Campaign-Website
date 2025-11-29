@@ -127,7 +127,7 @@ export default function HeadHandHeart() {
                         whileHover={{ scale: 1.1 }}
                         className={`absolute ${item.position} w-80 p-6 rounded-2xl border backdrop-blur-md ${item.bg} ${item.border} flex flex-col items-center text-center group cursor-pointer transition-all duration-300 z-30`}
                     >
-                        <div className={`p-3 rounded-full bg-black/50 mb-3 ${item.color} group-hover:bg-white/10 transition-colors`} onTouchStart={() => setIsTouched(true)} onTouchEnd={() => setIsTouched(false)}>
+                        <div className={`p-3 rounded-full bg-black/50 mb-3 ${item.color} group-hover:bg-white/10 transition-colors`}>
                             <item.icon size={32} />
                         </div>
                         <h3 className={`text-2xl font-bold mb-1 ${item.color}`}>{item.title}</h3>
