@@ -23,7 +23,7 @@ export const WhyNowScrollClient = () => {
     const clarityOpacity = useTransform(scrollYProgress, [0.75, 0.85, 1], [0, 1, 1]);
     const glowIntensity = useTransform(scrollYProgress, [0.8, 0.9, 1], [0, 1, 0.8]);
     return (
-        <div ref={containerRef} className="h-[300vh] relative bg-background">
+        <div ref={containerRef} className="h-[200vh] md:h-[300vh] relative bg-background">
             <WhyNow legacyOpacity={legacyOpacity}>
                 {/* Stage 2: The Disruption - Heavy Glitch */}
                 <motion.div
