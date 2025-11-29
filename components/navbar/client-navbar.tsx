@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useLanguage } from "@/context/language-context"
-import { Menu, X } from "lucide-react"
+import {  Menu, X } from "lucide-react"
 
 export default function ClientNavbar({ children }: { children: React.ReactNode }) {
     const { language, setLanguage, t } = useLanguage()
@@ -46,9 +46,9 @@ export default function ClientNavbar({ children }: { children: React.ReactNode }
                             </button>
                         </div>
 
-                        <button className="px-6 py-2 rounded-lg border-2 border-transparent bg-linear-to-r from-secondary to-primary text-background font-semibold hover:shadow-lg hover:shadow-secondary/50 transition-all">
+                        <a href="#partners"  className="px-6 py-2 rounded-lg border-2 border-transparent bg-linear-to-r from-secondary to-primary text-background font-semibold hover:shadow-lg hover:shadow-secondary/50 transition-all">
                             {t("nav.cta")}
-                        </button>
+                        </a>
                     </div>
 
                     {/* Mobile Menu Button */}

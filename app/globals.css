@@ -48,7 +48,9 @@
   --neon-teal: hsl(180 85% 55%);
   --glass-bg: hsl(0 0% 100%);
   --deep-purple: hsl(280 95% 3%);
-
+  --glow-teal: 180 85% 55%;
+  --glow-amber: 45 90% 60%;
+  --glow-purple: 280 85% 65%;
 }
 
 .dark {
@@ -89,6 +91,9 @@
   --neon-teal: hsl(180 85% 55%);
   --glass-bg: hsl(0 0% 100%);
   --deep-purple: hsl(280 95% 3%);
+  --glow-teal: 180 85% 55%;
+  --glow-amber: 45 90% 60%;
+  --glow-purple: 280 85% 65%;
 }
 
 @theme inline {
