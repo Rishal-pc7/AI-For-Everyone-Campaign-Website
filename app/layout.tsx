@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   description: 'AI For Everyone - Shift Kerala from being a Consumer of AI to a Creator of AI. We are building a future where technology serves us, not replaces us.',
 }
 
-import { Providers } from "@/components/providers"
 import AITransparency from "@/components/ai-transparency"
+import { SmoothScroll } from '@/components/smooth-scroll';
 
 export default function RootLayout({
   children,
@@ -23,10 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${spaceMono.variable} font-sans antialiased`}>
-        <Providers>
+        <SmoothScroll>
           {children}
           <AITransparency />
-        </Providers>
+        </SmoothScroll>
         <Analytics />
       </body>
     </html>

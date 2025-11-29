@@ -1,12 +1,9 @@
 "use client"
 
-import { useLanguage } from "@/context/language-context"
 import { AnimatedItem } from "@/components/shared/animation-wrapper"
 import { motion } from "framer-motion"
 
 export default function HeroContent() {
-    const { t } = useLanguage()
-
     return (
         <AnimatedItem className="space-y-3 order-2 lg:order-1">
             <motion.h1
@@ -28,7 +25,7 @@ export default function HeroContent() {
                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.2 } },
                 }}
             >
-                {t("hero.subtext")}
+                We are demystifying Artificial Intelligence for 35 million people, turning consumers into creators and observers into innovators.
             </motion.p>
         </AnimatedItem>
     )
