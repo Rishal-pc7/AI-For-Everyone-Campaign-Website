@@ -2,7 +2,7 @@
 
 > **A futuristic, narrative-driven campaign portal for the 'AI for Everyone' initiative, built using an AI-native development stack.**
 
-**[🔴 Live Demo](https://ai-for-everyone-campaign-website.vercel.app/)** | **[📄 Project Repository](https://github.com/your-username/your-repo-name)**
+**[🔴 Live Demo](https://ai-for-everyone-campaign-website.vercel.app/)** | **[📄 Project Repository](https://github.com/Rishal-pc7/AI-For-Everyonr-Campaign-Website)**
 
 ---
 
@@ -15,7 +15,7 @@ This project was not just "coded"; it was engineered using a **Multi-Agent AI Wo
 | :--- | :--- | :--- |
 | **1. Strategy** | **Google Gemini** | **Product Manager (PM)**<br>Analyzed the 10-page campaign PDF, generated the PRD, defined user personas (KuttyMakers vs. Young Makers), and wrote all narrative copy. |
 | **2. Design** | **v0.dev** | **UI Architect**<br>Drafted the initial "Glassmorphism" layout, the "Mission Control" Hero section, and the "Glitch Scroll" structure based on text prompts. |
-| **3. Polish** | **Lovable** | **Frontend Designer**<br>Refined the "Head, Hand, Heart" orbital animation and the "Resource Matcher" logic gate for mobile responsiveness. |
+| **3. Polish** | **Lovable** | **Frontend Designer**<br>Refined all the sections animation and the "Resource Matcher" logic gate for mobile responsiveness. |
 | **4. Assembly** | **Antigravity IDE** | **Full-Stack Engineer**<br>Used for final code assembly, routing, Next.js optimization, and blending the generated components into a cohesive app. |
 
 ---
