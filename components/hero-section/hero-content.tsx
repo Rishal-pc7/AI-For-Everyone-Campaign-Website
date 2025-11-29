@@ -1,12 +1,8 @@
-"use client"
-
-import { AnimatedItem } from "@/components/shared/animation-wrapper"
-import { motion } from "framer-motion"
-
+import { AnimatedHeading, AnimatedItem,AnimatedText } from "@/components/shared/animation-wrapper"
 export default function HeroContent() {
     return (
         <AnimatedItem className="space-y-3 order-2 lg:order-1">
-            <motion.h1
+            <AnimatedHeading
                 className="text-4xl md:text-6xl font-bold font-heading leading-tight"
                 variants={{
                     hidden: { opacity: 0, y: 30 },
@@ -16,9 +12,8 @@ export default function HeroContent() {
                 <span className="bg-linear-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
                     From Digital Literacy to AI Fluency
                 </span>
-            </motion.h1>
-
-            <motion.p
+            </AnimatedHeading>
+            <AnimatedText
                 className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed"
                 variants={{
                     hidden: { opacity: 0, y: 30 },
@@ -26,7 +21,7 @@ export default function HeroContent() {
                 }}
             >
                 We are demystifying Artificial Intelligence for 35 million people, turning consumers into creators and observers into innovators.
-            </motion.p>
+            </AnimatedText>
         </AnimatedItem>
     )
 }

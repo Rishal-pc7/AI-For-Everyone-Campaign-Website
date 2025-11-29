@@ -1,7 +1,7 @@
 import HeroBackground from "./hero-background"
 import { AnimationWrapper, AnimatedItem } from "@/components/shared/animation-wrapper"
 import HeroContent from "./hero-content"
-import AiSearchBar from "./ai-search-bar"
+import AiSearchBar from "./ai-terminal/ai-search-bar"
 
 export default function HeroSection() {
     return (

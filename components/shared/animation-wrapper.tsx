@@ -1,6 +1,7 @@
 "use client"
 
-import { motion, Variants } from "framer-motion"
+import { motion, TargetAndTransition, VariantLabels, Variants } from "framer-motion"
+import React from "react"
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -12,7 +13,6 @@ const containerVariants: Variants = {
         },
     },
 }
-
 const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -41,5 +41,33 @@ export function AnimatedItem({ children, className, variants }: { children: Reac
         <motion.div className={className} variants={variants || itemVariants}>
             {children}
         </motion.div>
+    )
+}
+
+export function AnimatedDiv({ children, className, initial, animate }: { children: React.ReactNode, className?: string, initial: TargetAndTransition | boolean | VariantLabels, animate?: TargetAndTransition | boolean | VariantLabels }) {
+    return (
+        <motion.div
+            className={className}
+            initial={initial}
+            animate={animate}
+        >
+            {children}
+        </motion.div>
+    )
+}
+
+
+export function AnimatedHeading({ children, className, variants }: { children: React.ReactNode, className?: string, variants?: Variants }) {
+    return (
+        <motion.h1 className={className} variants={variants || itemVariants}>
+            {children}
+        </motion.h1>
+    )
+}
+export function AnimatedText({ children, className, variants }: { children: React.ReactNode, className?: string, variants?: Variants }) {
+    return (
+        <motion.p className={className} variants={variants || itemVariants}>
+            {children}
+        </motion.p>
     )
 }
