@@ -1,4 +1,5 @@
-"use client";import { AnimatePresence } from "framer-motion";
+"use client";
+import { AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import AiTerminalMessages, { AiTerminalInput } from "./AiTerminalServer";
 
@@ -83,7 +84,7 @@ export default function AiTerminalClient({ SCENARIOS }: { SCENARIOS: { question:
     }, [scenarioIndex]);
 
     return (
-        <div className="w-full h-96 flex flex-col mb-6 px-4 mask-image-fade-top">
+        <div suppressHydrationWarning className="w-full h-96 flex flex-col mb-6 px-4 mask-image-fade-top">
             <div
                 ref={scrollRef}
                 className="flex-1 overflow-y-auto space-y-6 no-scrollbar"

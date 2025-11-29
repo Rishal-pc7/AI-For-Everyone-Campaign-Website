@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, TargetAndTransition, VariantLabels, Variants } from "framer-motion"
+import { motion, TargetAndTransition, Transition, VariantLabels, Variants, ViewportOptions } from "framer-motion"
 import React from "react"
 
 const containerVariants: Variants = {
@@ -44,12 +44,16 @@ export function AnimatedItem({ children, className, variants }: { children: Reac
     )
 }
 
-export function AnimatedDiv({ children, className, initial, animate }: { children: React.ReactNode, className?: string, initial: TargetAndTransition | boolean | VariantLabels, animate?: TargetAndTransition | boolean | VariantLabels }) {
+export function AnimatedDiv({ children, className, initial, animate,whileInView,viewport,transition,whileHover }: { children: React.ReactNode, className?: string, initial: TargetAndTransition | boolean | VariantLabels, animate?: TargetAndTransition | boolean | VariantLabels,whileInView?: TargetAndTransition | undefined | VariantLabels,viewport?: ViewportOptions | undefined,transition?: Transition<any>|undefined,whileHover?: TargetAndTransition |  VariantLabels|undefined  }) {
     return (
         <motion.div
             className={className}
             initial={initial}
             animate={animate}
+            whileInView={whileInView}
+            viewport={viewport}
+            transition={transition}
+            whileHover={whileHover}
         >
             {children}
         </motion.div>

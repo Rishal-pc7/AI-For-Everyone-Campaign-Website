@@ -11,7 +11,7 @@ interface Journey {
     label: string
     headline: string
     body: string
-    badge: [string,string?,string?]
+    badge: [string, string?, string?]
 }
 
 const journeys: Journey[] = [
@@ -29,7 +29,7 @@ const journeys: Journey[] = [
         label: "Young Makers",
         headline: "Build the Future.",
         body: "The workforce is shifting rapidly towards automation, and the best way to future-proof your career is to become a creator. We provide the platform for you to build real-world applications using Gen AI and LLMs. By joining our Hackathons and Study Jams, you will solve local problems and contribute to Kerala's own AI datasets, positioning yourself as an innovator in the new economy.",
-        badge: ["College Students","Early Professionals"],
+        badge: ["College Students", "Early Professionals"],
     },
     {
         id: "friends",
@@ -37,7 +37,7 @@ const journeys: Journey[] = [
         label: "Friends of the Movement",
         headline: "Safety & Awareness.",
         body: "AI offers exciting opportunities, but it also brings risks like deepfakes and scams that target our community. We empower you to pause, question, and protect yourself by hosting Learning Circles right in your neighborhood. These simple discussions help you understand privacy and misinformation, ensuring you can guide the next generation safely through the AI era.",
-        badge: ["Educators","Professionals","Parents & Community Leaders"],
+        badge: ["Educators", "Professionals", "Parents & Community Leaders"],
     },
 ]
 
@@ -127,12 +127,12 @@ export default function ChooseJourneyClient() {
                                         {activeJourney.headline}
                                     </h3>
                                     {
-                                                activeJourney.badge.map((badge)=>(
-                                                    <div className="inline-block px-3 mr-3 mb-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-medium text-neon-purple">
-                                                        {badge}
-                                                    </div>
-                                                ))
-                                            }
+                                        activeJourney.badge.map((badge) => (
+                                            <div key={badge} className="inline-block px-3 mr-3 mb-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-medium text-neon-purple">
+                                                {badge}
+                                            </div>
+                                        ))
+                                    }
                                     <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                                         {activeJourney.body}
                                     </p>
@@ -196,8 +196,8 @@ export default function ChooseJourneyClient() {
                                                 {journey.headline}
                                             </h3>
                                             {
-                                                journey.badge.map((badge)=>(
-                                                    <div className="inline-block px-3 mr-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-medium text-neon-purple">
+                                                journey.badge.map((badge) => (
+                                                    <div key={badge} className="inline-block px-3 mr-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-medium text-neon-purple">
                                                         {badge}
                                                     </div>
                                                 ))

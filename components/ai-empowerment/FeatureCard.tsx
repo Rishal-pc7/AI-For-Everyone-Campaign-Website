@@ -1,23 +1,21 @@
-"use client"
-import { motion } from "framer-motion";
-import { LucideIcon } from "lucide-react";
-import { ReactNode } from "react";
+import { Briefcase, Globe, LucideIcon, ShieldCheck } from "lucide-react";
+import { AnimatedDiv } from "../shared/animation-wrapper";
 
 interface FeatureCardProps {
-  icon: LucideIcon;
+  key:string|number
+  icon:string
   headline: string;
   body: string;
   glowColor: "teal" | "amber" | "purple";
-  backgroundEffect?: ReactNode;
   delay?: number;
 }
 
 export const FeatureCard = ({
-  icon: Icon,
+  key,
+  icon,
   headline,
   body,
   glowColor,
-  backgroundEffect,
   delay = 0,
 }: FeatureCardProps) => {
   const glowColorMap = {
@@ -25,9 +23,10 @@ export const FeatureCard = ({
     amber: "text-glow-amber group-hover:border-glow-amber/50",
     purple: "text-glow-purple group-hover:border-glow-purple/50",
   };
-
+  const Icon= icon=="ShieldCheck"? ShieldCheck:icon=="Briefcase"? Briefcase: Globe
   return (
-    <motion.div
+    <AnimatedDiv
+      key={key}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -35,13 +34,6 @@ export const FeatureCard = ({
       whileHover={{ y: -8 }}
       className="group relative glass-card rounded-xl p-8 transition-all duration-300 hover:border-opacity-50 overflow-hidden"
     >
-      {/* Background Effect */}
-      {backgroundEffect && (
-        <div className="absolute inset-0 opacity-20 transition-opacity duration-300 group-hover:opacity-30">
-          {backgroundEffect}
-        </div>
-      )}
-
       {/* Content */}
       <div className="relative z-10">
         {/* Icon */}
@@ -76,6 +68,6 @@ export const FeatureCard = ({
           })`,
         }}
       />
-    </motion.div>
+    </AnimatedDiv>
   );
 };
