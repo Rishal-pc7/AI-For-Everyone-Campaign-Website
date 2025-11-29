@@ -113,8 +113,8 @@ export default function HeadHandHeart() {
                 {/* 3. The Central Core */}
                 <div className="relative z-20 flex flex-col items-center justify-center w-40 h-40 bg-black/50 backdrop-blur-xl border border-white/10 rounded-full shadow-[0_0_50px_rgba(45,212,191,0.2)]">
                     <Sparkles className="w-8 h-8 text-white mb-2 animate-pulse" />
-                    <span className="text-xs font-mono text-teal-200 tracking-widest">CORE</span>
                     <span className="text-sm font-bold text-white">RESPONSIBLE</span>
+                    <span className="text-xs font-mono text-teal-200 tracking-widest">AI</span>
                 </div>
 
                 {/* 4. The 3 Orbiting Nodes */}

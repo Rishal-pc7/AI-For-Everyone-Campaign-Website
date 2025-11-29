@@ -56,17 +56,13 @@ export default function CollaborationModesClient() {
                         >
                             <div className="relative">
                                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-neon-purple/30 rounded-full blur-xl group-hover:bg-neon-purple/50 transition-colors" />
-                                <h3 className="text-2xl font-bold text-neon-purple mb-4 relative z-10">
+                                <h3 className="text-2xl font-bold bg-linear-to-r from-accent via-primary to-accent bg-clip-text text-transparent pb-2 relative z-10">
                                     {mode.title}
                                 </h3>
                             </div>
                             <p className="text-muted-foreground leading-relaxed">
                                 {mode.description}
                             </p>
-                            <div className="mt-6 flex items-center text-neon-purple group-hover:translate-x-2 transition-transform">
-                                <span className="text-sm font-semibold">Learn more</span>
-                                <ArrowRight className="ml-2 w-4 h-4" />
-                            </div>
                         </AnimatedItem>
                     ))}
                 </div>

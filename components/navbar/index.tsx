@@ -5,7 +5,7 @@ const Links = () => {
     const navLinks = [
         { label: "About", href: "#about" },
         { label: "Philosophy", href: "#philosophy" },
-        { label: "Partners", href: "#partners" },
+        { label: "Your Role", href: "#yourRole" },
     ]
     return (
         navLinks.map((link) => (

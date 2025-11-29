@@ -54,7 +54,7 @@ const AiSearchBar = () => {
             const currentScenario = SCENARIOS[scenarioIndex];
 
             // 1. Wait before starting new scenario
-            await new Promise(r => setTimeout(r, 100)); // Reduced from 500ms
+            await new Promise(r => setTimeout(r, 100)); 
             if (!isMounted) return;
 
             // 2. Simulate User Typing
@@ -64,7 +64,7 @@ const AiSearchBar = () => {
                 await new Promise(r => setTimeout(r, 20)); // Typing speed
             }
 
-            await new Promise(r => setTimeout(r, 50)); // Reduced from 150ms
+            await new Promise(r => setTimeout(r, 50));
             if (!isMounted) return;
 
             // 3. Send User Message

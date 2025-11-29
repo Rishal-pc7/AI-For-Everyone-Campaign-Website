@@ -16,7 +16,7 @@ const partners = [
     },
     {
         icon: Megaphone,
-        title: "Media Partners",
+        title: "Outreach Partners",
         details: "Amplifying stories via newspapers, TV, and social media.",
     },
     {
@@ -54,7 +54,7 @@ export default function PartnerEcosystemClient() {
                             <div className="mb-6 p-4 rounded-xl bg-neon-purple/20 group-hover:bg-neon-purple/30 transition-colors">
                                 <Icon className="w-8 h-8 text-neon-purple" />
                             </div>
-                            <h3 className="text-xl font-semibold text-neon-purple mb-3">
+                            <h3 className="text-xl font-semibold bg-linear-to-r from-accent via-primary to-accent bg-clip-text text-transparent  mb-3">
                                 {partner.title}
                             </h3>
                             <p className="text-muted-foreground text-sm leading-relaxed">

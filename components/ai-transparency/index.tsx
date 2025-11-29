@@ -14,7 +14,7 @@ export default function AITransparency() {
                 className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-2 bg-black/50 backdrop-blur-md border border-teal-500/30 rounded-full text-teal-400 hover:bg-teal-500/10 hover:scale-105 transition-all shadow-[0_0_15px_rgba(45,212,191,0.2)] group"
             >
                 <Zap size={16} className="group-hover:text-yellow-400 transition-colors" />
-                <span className="text-xs font-mono font-bold tracking-wide">BUILT WITH AI</span>
+                <span className="text-xs font-mono font-bold tracking-wide">HOW THIS WAS MADE🤖</span>
             </button>
 
             {/* MODAL */}
